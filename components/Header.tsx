@@ -4,7 +4,7 @@ const Header = () => {
   return (
     <>
       <div>
-        <div className="flex bg-cyan-100 justify-between px-16 py-5 text-lg shadow-md">
+        <div className="flex bg-amber-200 justify-between px-16 py-5 text-lg shadow-md">
           <span className="font-bold text-xl">IOL 2025</span>
           <ul className="hidden md:flex gap-x-10 text-gray-600">
             <li>
