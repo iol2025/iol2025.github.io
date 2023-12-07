@@ -1,6 +1,6 @@
 "use client";
 import Link from "next/link";
-import React, { useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 
 type DropdownProps = {
   name: string;
@@ -10,6 +10,7 @@ type DropdownProps = {
 
 const Dropdown = ({ name, options, link }: DropdownProps) => {
   const [isOpen, setIsOpen] = useState(false);
+  const btnRef = useRef<HTMLButtonElement>(null);
 
   const toggleDropdown = () => {
     setIsOpen(!isOpen);
@@ -19,6 +20,18 @@ const Dropdown = ({ name, options, link }: DropdownProps) => {
     setIsOpen(false);
   };
 
+  useEffect(() => {
+    const handleClickAway = (e: any) => {
+      if (!btnRef.current?.contains(e.target as Node)) {
+        closeDropdown();
+      }
+    };
+    document.addEventListener("click", handleClickAway);
+    return () => {
+      document.removeEventListener("click", handleClickAway);
+    };
+  }, [btnRef]);
+
   return (
     <div className="w-full">
       <div className="relative inline-block">
@@ -26,6 +39,7 @@ const Dropdown = ({ name, options, link }: DropdownProps) => {
           type="button"
           className="transition px-4 py-4 text-gray-600 hover:bg-amber-300 font-medium text-sm inline-flex items-center"
           onClick={toggleDropdown}
+          ref={btnRef}
         >
           {name}{" "}
           <svg

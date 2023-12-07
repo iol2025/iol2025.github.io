@@ -26,9 +26,16 @@ const Navbar = () => {
             <li>
               <Dropdown
                 name="Support Us"
-                options={["Support Us", "test2"]}
-                link={["support", "test2"]}
+                options={["Support Us", "Sponsors"]}
+                link={["support", "sponsor"]}
               />
+            </li>
+            <li>
+              <Link href="#contact">
+                <div className="transition p-4 font-medium text-sm inline-flex  hover:bg-amber-300">
+                  <p className="hover:text-black">Contact Us</p>
+                </div>
+              </Link>
             </li>
           </ul>
         </div>

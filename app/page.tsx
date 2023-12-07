@@ -21,7 +21,7 @@ export default function Home() {
           台灣將於2025年首次主辦國際語言學奧林匹亞競賽
         </h2>
       </div> */}
-      <div className="bg-amber-50">
+      <div className="bg-amber-50 py-10">
         <h1 className="text-center text-4xl font-bold pt-10">簡介</h1>
         <div className="mx-40 text-lg pb-5">
           <h2 className="text-2xl font-bold my-5">國際語言學奧林匹亞競賽</h2>
@@ -30,6 +30,32 @@ export default function Home() {
           </p>
           <div className="w-40 mx-auto my-2">
             <Link href="/about">
+              <p className="text-lg text-center font-bold py-2 hover:text-amber-700">
+                了解更多
+              </p>
+            </Link>
+          </div>
+        </div>
+        <h1 className="text-center text-4xl font-bold pt-20">贊助資訊</h1>
+        <div className="mx-40 text-lg pb-5">
+          <h2 className="text-2xl font-bold my-5">贊助方式</h2>
+          <p>
+            &emsp;&emsp;贊助方式包含實物贊助與捐款贊助兩種模式，詳細資訊與回饋歡迎參考募資計畫書：
+            <Link
+              href="/pdf/funding.pdf"
+              className="text-cyan-700 hover:text-cyan-900"
+              target="_blank"
+            >
+              募資計畫書連結
+            </Link>
+            ，或透過以下
+            <Link href="#contact" className="text-cyan-700 hover:text-cyan-900">
+              聯絡方式
+            </Link>
+            聯絡我們。
+          </p>
+          <div className="w-40 mx-auto my-2">
+            <Link href="/support">
               <p className="text-lg text-center font-bold py-2 hover:text-amber-700">
                 了解更多
               </p>
