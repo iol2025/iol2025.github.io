@@ -53,7 +53,7 @@ const Dropdown = ({ name, options, link }: DropdownProps) => {
               aria-labelledby="options-menu"
             >
               {options.map((option, index) => (
-                <Link href={link[index]}>
+                <Link href={link[index]} key={index}>
                   <p
                     className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100"
                     onClick={closeDropdown}
