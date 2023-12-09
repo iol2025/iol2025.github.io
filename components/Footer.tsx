@@ -15,7 +15,6 @@ const Footer = () => {
           </div>
           <div className="w-1/3 p-2">
             <p>國立台灣大學語言學研究所教授 謝舒凱</p>
-            <p>0922 727 359</p>
             <p>shukaihsieh@ntu.edu.tw</p>
           </div>
         </div>
