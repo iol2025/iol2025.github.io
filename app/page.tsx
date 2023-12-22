@@ -40,13 +40,13 @@ export default function Home() {
         <div className="mx-40 text-lg pb-5">
           <h2 className="text-2xl font-bold my-5">贊助方式</h2>
           <p>
-            &emsp;&emsp;贊助方式包含實物贊助與捐款贊助兩種模式，詳細資訊與回饋歡迎參考募資計畫書：
+            &emsp;&emsp;贊助方式包含實物贊助與捐款贊助兩種模式，詳細資訊與回饋歡迎參考計畫書：
             <Link
-              href="/pdf/funding.pdf"
+              href="/pdf/program.pdf"
               className="text-cyan-700 hover:text-cyan-900"
               target="_blank"
             >
-              募資計畫書連結
+              【計畫書連結】
             </Link>
             ，或透過以下
             <Link href="#contact" className="text-cyan-700 hover:text-cyan-900">

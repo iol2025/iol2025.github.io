@@ -33,13 +33,13 @@ export default function support() {
           <h2 className="text-2xl font-bold text-center">其他資訊</h2>
           <br />
           <p>
-            歡迎參考募資計畫書：
+            歡迎參考計畫書：
             <Link
-              href="/pdf/funding.pdf"
+              href="/pdf/program.pdf"
               className="text-cyan-700 hover:text-cyan-900"
               target="_blank"
             >
-              募資計畫書連結
+              【計畫書連結】
             </Link>
           </p>
           <p>

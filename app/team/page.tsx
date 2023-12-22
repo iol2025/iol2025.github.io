@@ -23,8 +23,8 @@ export default function team() {
               計畫主持人謝舒凱、兼任行政助理（林欣誼、林建志、連子力）
             </li>
             <li>
-              <b>募資公關組：</b>益閣教育團隊（賴彥甫、Rebecca Hsu）、蔡碧玲
-              Rebecca Tsai、王薇森 WANG, WEI-SEN
+              <b>公關組：</b>益閣教育團隊（賴彥甫、Rebecca Hsu）、蔡碧玲 Rebecca
+              Tsai、王薇森 WANG, WEI-SEN
             </li>
             <li>
               <b>培訓推廣組：</b>蕭素英、郭貞秀、江豪文
