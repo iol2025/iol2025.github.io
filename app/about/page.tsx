@@ -2,11 +2,11 @@ import Link from "next/link";
 
 export default function about() {
   return (
-    <>
+    <div className="mx-10 sm:mx-20 lg:mx-40">
       <div className="my-20">
         <h1 className="text-center text-6xl font-bold my-5">About</h1>
       </div>
-      <div className="mx-40 my-10">
+      <div className=" my-10">
         <h2 className="text-2xl font-bold my-5">國際語言學奧林匹亞競賽簡介</h2>
         <div className="text-lg">
           <p className="my-2">
@@ -65,6 +65,6 @@ export default function about() {
           </p>
         </div>
       </div>
-    </>
+    </div>
   );
 }

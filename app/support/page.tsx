@@ -8,13 +8,21 @@ export default function support() {
       </div>
       <div className="mb-20">
         <h1 className="text-center text-4xl font-bold my-5">捐款資訊</h1>
-        <div className="border-2 p-8 w-1/2 mx-auto my-5 text-lg leading-8 shadow-md">
+        <div className="border-2 p-8 w-3/4 md:w-2/3 lg:w-1/2 mx-auto my-5 text-lg leading-8 shadow-md">
           <h2 className="text-2xl font-bold text-center">個人捐款</h2>
           <br />
-          <p>銀行代號：808</p>
-          <p>銀行：玉山銀行 台大分行</p>
-          <p>帳號：0624 940 151025</p>
-          <p>戶名：台灣語言文化與資訊協會</p>
+          <p>
+            <b>銀行代號：</b>808
+          </p>
+          <p>
+            <b>銀行：</b>玉山銀行 台大分行
+          </p>
+          <p>
+            <b>帳號：</b>0624 940 151025
+          </p>
+          <p>
+            <b>戶名：</b>台灣語言文化與資訊協會
+          </p>
           <ul className="text-base">
             <li>&emsp;若有備註欄請註明「捐款語奧活動」。</li>
             <li>
@@ -24,12 +32,12 @@ export default function support() {
                 className="text-cyan-700 hover:text-cyan-900"
                 target="_blank"
               >
-                表單連結
+                【表單連結】
               </Link>
             </li>
           </ul>
         </div>
-        <div className="border-2 p-8 w-1/2 mx-auto my-5 text-lg leading-8 shadow-md">
+        <div className="border-2 p-8 w-3/4 md:w-2/3 lg:w-1/2 mx-auto my-5 text-lg leading-8 shadow-md">
           <h2 className="text-2xl font-bold text-center">其他資訊</h2>
           <br />
           <p>

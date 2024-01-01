@@ -37,13 +37,15 @@ const Dropdown = ({ name, options, link }: DropdownProps) => {
       <div className="relative inline-block">
         <button
           type="button"
-          className="transition px-4 py-4 text-gray-600 hover:bg-amber-300 font-medium text-sm inline-flex items-center"
+          className="transition px-4 py-4 text-gray-700 hover:bg-amber-300 font-medium text-sm inline-flex items-center"
           onClick={toggleDropdown}
           ref={btnRef}
         >
           {name}{" "}
           <svg
-            className="w-2.5 h-2.5 ml-2.5"
+            className={`${
+              isOpen ? "-rotate-180" : ""
+            } w-2.5 h-2.5 ml-2.5 transition-transform duration-300`}
             aria-hidden="true"
             xmlns="http://www.w3.org/2000/svg"
             fill="none"
@@ -58,27 +60,28 @@ const Dropdown = ({ name, options, link }: DropdownProps) => {
             />
           </svg>
         </button>
-
-        {isOpen && (
-          <div className="origin-top-right absolute right-0 w-44 rounded-lg shadow-lg bg-white ring-1 ring-black ring-opacity-5 z-10">
-            <ul
-              role="menu"
-              aria-orientation="vertical"
-              aria-labelledby="options-menu"
-            >
-              {options.map((option, index) => (
-                <Link href={link[index]} key={index}>
-                  <p
-                    className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100"
-                    onClick={closeDropdown}
-                  >
-                    {option}
-                  </p>
-                </Link>
-              ))}
-            </ul>
-          </div>
-        )}
+        <div
+          className={`${
+            isOpen ? "opacity-100" : "hidden opacity-0"
+          } origin-top-right absolute right-0 w-44 rounded-lg shadow-lg bg-white ring-1 ring-black ring-opacity-5 z-10`}
+        >
+          <ul
+            role="menu"
+            aria-orientation="vertical"
+            aria-labelledby="options-menu"
+          >
+            {options.map((option, index) => (
+              <Link href={link[index]} key={index}>
+                <p
+                  className="block m-1 px-4 py-2 rounded-md text-sm text-gray-700 transition hover:bg-gray-100"
+                  onClick={closeDropdown}
+                >
+                  {option}
+                </p>
+              </Link>
+            ))}
+          </ul>
+        </div>
       </div>
     </div>
   );

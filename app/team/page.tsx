@@ -4,11 +4,11 @@ import NTUCLA from "@/assets/NTUCLA.png";
 
 export default function team() {
   return (
-    <>
+    <div className="mx-10 sm:mx-20 lg:mx-40">
       <div className="my-20">
         <h1 className="text-center text-6xl font-bold my-5">Our Team</h1>
       </div>
-      <div className="mx-40 my-10">
+      <div className=" my-10">
         <h1 className="text-center text-4xl font-bold my-5">台灣語奧委員會</h1>
         <div className="text-lg">
           <p>
@@ -40,13 +40,13 @@ export default function team() {
           </p>
         </div>
       </div>
-      <div className="mx-40 my-10">
+      <div className=" my-10">
         <h1 className="text-center text-4xl font-bold my-5">主辦單位</h1>
         <div className="flex flex-row">
           <Card name="國立台灣大學語言學研究所" image={NTUGIL} height={200} />
           <Card name="國立台灣大學文學院" image={NTUCLA} width={400} />
         </div>
       </div>
-    </>
+    </div>
   );
 }
