@@ -7,6 +7,12 @@ type DropdownProps = {
   options: string[];
   link: string[];
 };
+type MobileDropdownProps = {
+  name: string;
+  options: string[];
+  link: string[];
+  closeNav: () => void;
+};
 
 const Dropdown = ({ name, options, link }: DropdownProps) => {
   const [isOpen, setIsOpen] = useState(false);
@@ -87,4 +93,49 @@ const Dropdown = ({ name, options, link }: DropdownProps) => {
   );
 };
 
-export default Dropdown;
+const MobileDropdown = ({name, options, link, closeNav} : MobileDropdownProps) => {
+  const [isOpen, setIsOpen] = useState(false);
+  const toggleDropdown = () => { setIsOpen(!isOpen); };
+  const closeDropdown = () => { setIsOpen(false); closeNav(); };
+
+  return (
+    <>
+      <div
+        className={`transition w-full p-4 font-medium justify-center text-md inline-flex hover:bg-amber-300 ${isOpen ? "pb-2.5" : ""}`}
+        onClick={toggleDropdown}
+      >
+        <p className="hover:text-black">
+          {name}
+          <svg
+            className={`${
+              isOpen ? "-rotate-180" : ""
+            } w-3 h-3 ml-2.5 transition-transform duration-300 inline`}
+            aria-hidden="true"
+            xmlns="http://www.w3.org/2000/svg"
+            fill="none"
+            viewBox="0 0 10 6"
+          >
+            <path
+              stroke="currentColor"
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              strokeWidth="2"
+              d="m1 1 4 4 4-4"
+            />
+          </svg>
+        </p>
+      </div>
+      {isOpen && <>
+        {options.map((option, index) => (
+          <Link href={link[index]} key={index} onClick={closeDropdown}>
+            <div className="transition w-full p-2.5 font-medium justify-center text-sm inline-flex hover:bg-amber-300">
+              <p className="hover:text-black">{option}</p>
+            </div>
+          </Link>
+        ))}
+      </>}
+    </>
+  )
+}
+
+export { Dropdown, MobileDropdown } ;

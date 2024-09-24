@@ -2,7 +2,7 @@
 import React, { useState } from "react";
 import Link from "next/link";
 import Image from "next/image";
-import Dropdown from "./Dropdown";
+import { Dropdown, MobileDropdown } from "./Dropdown";
 import menu from "@/assets/menu.png";
 
 const Navbar = () => {
@@ -25,16 +25,30 @@ const Navbar = () => {
             </li>
             <li>
               <Dropdown
-                name="About"
-                options={["About", "Our Team"]}
-                link={["about", "team"]}
+                name="IOL 2025"
+                options={["Programme", "Venues", "Transportation", "Important dates", "Accommodation", "Guidebook", "Local committee", "Volunteering"]}
+                link={["/contest/programme", "/contest/venues", "/contest/transportation", "/contest/dates", "/contest/accommodation", "guidebook", "/contest/committee", "/contest/volunteering"]}
               />
             </li>
             <li>
               <Dropdown
-                name="Support Us"
-                options={["Support Us", "Sponsors"]}
-                link={["support", "sponsor"]}
+                name="Results"
+                options={["Individual contest", "Group contest"]}
+                link={["/results/individual", "/results/group"]}
+              />
+            </li>
+            <li>
+              <Link href="/gallery">
+                <div className="transition p-4 font-medium text-sm inline-flex  hover:bg-amber-300">
+                  <p className="hover:text-black">Gallery</p>
+                </div>
+              </Link>
+            </li>
+            <li>
+              <Dropdown
+                name="Sponsors"
+                options={["Sponsors & Partners", "Donation"]}
+                link={["/sponsors", "#donation"]}
               />
             </li>
             <li>
@@ -73,35 +87,38 @@ const Navbar = () => {
             </li>
             <div className="mx-8 border-gray-600/25 border-b-2" />
             <li>
-              <Link href="/about" onClick={closeNav}>
+              <MobileDropdown
+                name="IOL 2025"
+                options={["Programme", "Venues", "Transportation", "Important dates", "Accommodation", "Guidebook", "Local committee", "Volunteering"]}
+                link={["/contest/programme", "/contest/venues", "/contest/transportation", "/contest/dates", "/contest/accommodation", "guidebook", "/contest/committee", "/contest/volunteering"]}
+                {...{closeNav}}
+              />
+            </li>
+            <div className="mx-8 border-gray-600/25 border-b-2" />
+            <li>
+              <MobileDropdown
+                name="Results"
+                options={["Individual contest", "Group contest"]}
+                link={["/results/individual", "/results/group"]}
+                {...{closeNav}}
+              />
+            </li>
+            <div className="mx-8 border-gray-600/25 border-b-2" />
+            <li>
+              <Link href="/gallery" onClick={closeNav}>
                 <div className="transition w-full p-4 font-medium justify-center text-md inline-flex hover:bg-amber-300">
-                  <p className="hover:text-black">About</p>
+                  <p className="hover:text-black">Gallery</p>
                 </div>
               </Link>
             </li>
             <div className="mx-8 border-gray-600/25 border-b-2" />
             <li>
-              <Link href="/team" onClick={closeNav}>
-                <div className="transition w-full p-4 font-medium justify-center text-md inline-flex hover:bg-amber-300">
-                  <p className="hover:text-black">Our Team</p>
-                </div>
-              </Link>
-            </li>
-            <div className="mx-8 border-gray-600/25 border-b-2" />
-            <li>
-              <Link href="/support" onClick={closeNav}>
-                <div className="transition w-full p-4 font-medium justify-center text-md inline-flex hover:bg-amber-300">
-                  <p className="hover:text-black">Support Us</p>
-                </div>
-              </Link>
-            </li>
-            <div className="mx-8 border-gray-600/25 border-b-2" />
-            <li>
-              <Link href="/sponsor" onClick={closeNav}>
-                <div className="transition w-full p-4 font-medium justify-center text-md inline-flex hover:bg-amber-300">
-                  <p className="hover:text-black">Sponsors</p>
-                </div>
-              </Link>
+              <MobileDropdown
+                name="Sponsors"
+                options={["Sponsors & Partners", "Donation"]}
+                link={["/sponsors", "#donation"]}
+                {...{closeNav}}
+              />
             </li>
             <div className="mx-8 border-gray-600/25 border-b-2" />
             <li>
