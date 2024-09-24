@@ -1,4 +1,4 @@
-export default () => {
+export default function Page () {
   return (
     <>
       <div className="bg-amber-50 py-10">
