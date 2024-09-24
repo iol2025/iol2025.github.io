@@ -27,7 +27,7 @@ const Navbar = () => {
               <Dropdown
                 name="IOL 2025"
                 options={["Programme", "Venues", "Transportation", "Important dates", "Accommodation", "Guidebook", "Local committee", "Volunteering"]}
-                link={["/contest/programme", "/contest/venues", "/contest/transportation", "/contest/dates", "/contest/accommodation", "guidebook", "/contest/committee", "/contest/volunteering"]}
+                link={["/contest/programme", "/contest/venues", "/contest/transportation", "/contest/dates", "/contest/accommodation", "/contest/guidebook", "/contest/committee", "/contest/volunteering"]}
               />
             </li>
             <li>
@@ -90,7 +90,7 @@ const Navbar = () => {
               <MobileDropdown
                 name="IOL 2025"
                 options={["Programme", "Venues", "Transportation", "Important dates", "Accommodation", "Guidebook", "Local committee", "Volunteering"]}
-                link={["/contest/programme", "/contest/venues", "/contest/transportation", "/contest/dates", "/contest/accommodation", "guidebook", "/contest/committee", "/contest/volunteering"]}
+                link={["/contest/programme", "/contest/venues", "/contest/transportation", "/contest/dates", "/contest/accommodation", "/contest/guidebook", "/contest/committee", "/contest/volunteering"]}
                 {...{closeNav}}
               />
             </li>

@@ -6,7 +6,12 @@ import FadeIn from "@/components/FadeIn";
 export default function Home() {
   return (
     <>
-      <div className="relative">
+      <div className="bg-amber-50 py-10">
+        <div className="mx-10 sm:mx-20 lg:mx-40">
+          <div className="text-center text-lg">Comming Soon</div>
+        </div>
+      </div>
+      {/* <div className="relative">
         <Image
           src={background}
           alt="background"
@@ -18,7 +23,6 @@ export default function Home() {
       </div>
       <div className="bg-amber-50 py-10">
         <div className="mx-10 sm:mx-20 lg:mx-40">
-          {/* countdown clock */}
           <div className="text-center text-2xl font-bold pt-10">
             <div className="pb-5">
               Before Contest
@@ -88,7 +92,7 @@ export default function Home() {
             </div>
           </FadeIn>
         </div>
-      </div>
+      </div> */}
     </>
   );
 }
