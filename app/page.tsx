@@ -18,8 +18,28 @@ export default function Home() {
       </div>
       <div className="bg-amber-50 py-10">
         <div className="mx-10 sm:mx-20 lg:mx-40">
+          {/* countdown clock */}
+          <div className="text-center text-2xl font-bold pt-10">
+            <div className="pb-5">
+              Before Contest
+            </div>
+            <div className="pb-5">
+              {(() => {
+                const today = new Date();
+                const contestDay = new Date(Date.UTC(2025, 7, 1));
+                const diffHours = Math.floor((contestDay.getTime() - today.getTime()) / (1000 * 60 * 60));
+                return contestDay > today ? <>
+                  <span className="px-3 text-8xl">{Math.floor(diffHours / 24)}</span>
+                  <span className="px-3 ">days</span>
+                  <span className="px-3 text-8xl">{diffHours % 24}</span>
+                  <span className="px-3 ">hours</span>
+                </> : <></>
+              })()}
+            </div>
+          </div>
+
           <FadeIn>
-            <h1 className="text-center text-4xl font-bold pt-10">簡介</h1>
+            <h1 className="text-center text-4xl font-bold pt-20">簡介</h1>
             <div className=" text-lg pb-5">
               <h2 className="text-2xl font-bold my-5">
                 國際語言學奧林匹亞競賽
